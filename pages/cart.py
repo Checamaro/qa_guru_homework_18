@@ -4,8 +4,9 @@ from allure import attach
 from allure_commons.types import AttachmentType
 import requests
 
+
 class Cart:
-    def open_to_cart(self):
+    def cart_open(self):
         with allure.step('Open cart'):
             browser.open('/cart')
             return self
@@ -19,5 +20,6 @@ class Cart:
             browser.open('https://demowebshop.tricentis.com/cart')
             browser.driver.add_cookie({'name': 'Nop.customer', 'value': cookies})
 
-# Инициализация экземпляра класса Cart
+
 add_products_to_cart = Cart()
+page_of_product = 'https://demowebshop.tricentis.com/addproducttocart/catalog'
